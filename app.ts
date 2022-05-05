@@ -3,10 +3,7 @@ import express from "express"
 import path from "path"
 import cookieParser from "cookie-parser"
 import logger from "morgan"
-
-import indexRouter from "./routes/index"
-import usersRouter from "./routes/users"
-
+import cors from "cors";
 const app = express();
 
 // require connection
@@ -16,6 +13,7 @@ import { errorHandle } from "./services/errorHandle"
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
