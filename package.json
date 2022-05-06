@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./dist/server.js",
+    "start": "node ./dist/bin/server.js",
     "dev": "nodemon ./bin/server.ts"
   },
   "dependencies": {
